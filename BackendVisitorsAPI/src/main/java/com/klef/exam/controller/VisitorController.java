@@ -27,6 +27,12 @@ public class VisitorController {
 	@Autowired
 	private VisitorService visitorService;
 	
+	@GetMapping("/")
+    public String home() 
+    {
+        return "Jenkins Full Stack Deployment Demo";
+    }
+	
 	@PostMapping("/add")
 	public ResponseEntity<String> addvisitor(@RequestBody Visitor visitor){
 		
